@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="189" height="77" viewBox="0 0 189 77">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 25px;
+        fill: #000;
+        font-family: Montserrat;
+        font-weight: 800;
+      }
+    </style>
+  </defs>
+  <text id="LOGO_DO_PROJETO" data-name="LOGO DO PROJETO" class="cls-1" transform="matrix(1.584, 0, 0, 1.584, -1.608, 28.886)">LOGO DO<tspan x="0" dy="30">PROJETO</tspan></text>
+</svg>
