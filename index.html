@@ -6,22 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conselheiros da Cidadania</title>
     <link rel="stylesheet" href="./assets/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/global.css">
+
+    <!--Função para colocar horas contagem regressiva-->
+
+    <script language="Javascript">
+
+        var YY = 2019;
+
+        var MM = 07;
+
+        var DD = 29;
+
+        var HH = 14;
+
+        var MI = 00;
+
+        var SS = 00;
+
+
+
+        function atualizaContador()
+
+        {
+
+            var hoje = new Date();
+
+            var futuro = new Date(YY, MM - 1, DD, HH, MI, SS);
+
+            var ss = parseInt((futuro - hoje) / 1000);
+
+            var mm = parseInt(ss / 60);
+
+            var hh = parseInt(mm / 60);
+
+            var dd = parseInt(hh / 24);
+
+            ss = ss - (mm * 60);
+
+            mm = mm - (hh * 60);
+
+            hh = hh - (dd * 24);
+
+            var faltam = '';
+
+
+
+            faltam += (dd && dd > 1) ? dd + ' DIAS ' : (dd == 1 ? '1 DIA ' : '');
+
+            var dia = faltam;
+
+            faltam += (toString(hh).length) ? hh + ' hr, ' : '';
+
+            var hora = (toString(hh).length) ? hh + ' hr, ' : '';
+
+            faltam += (toString(mm).length) ? mm + ' min e ' : '';
+
+            var minuto = (toString(mm).length) ? mm + ' min ' : '';
+
+
+
+            faltam += ss + ' seg';
+
+
+
+            if (dd + hh + mm + ss > 0)
+
+            {
+
+                // document.getElementById('contador').innerHTML = faltam;
+
+                $('#dia').html(dd);
+
+                $('#hora').html(hh);
+
+                $('#minuto').html(mm);
+
+                $('#segundo').html(ss);
+
+                setTimeout(atualizaContador, 1000);
+
+            } else
+
+            {
+
+                // document.getElementById('contador').innerHTML = 'CHEGOU!!!!';
+
+                $('#dia').html(0);
+
+                $('#hora').html(0);
+
+                $('#minuto').html(0);
+
+                $('#segundo').html(0);
+
+                // $('.heading-alt').html('CHEGOU!!!!');
+
+                setTimeout(atualizaContador, 1000);
+
+            }
+
+        }         
+
+    </script>
 </head>
 
 <body>
-    <section id="home" class="parallax container-fluid">
+    <section id="home" class="parallax container-fluid d-flex align-items-center">
         <nav class="row position-fixed fixed-top">
             <div class="logo col-2">
                 <img src="./assets/img/logo.svg" alt="Logo Conselgeiros da Cidadania">
             </div>
             <div class="col"></div>
             <div class="nav__button 
-                        col-5 col-lg-4 p-2
-                        d-inline-flex justify-content-md-around
-                        flex-sm-column flex-md-row
-            ">
+                            col-5 col-lg-4 p-2
+                            d-inline-flex justify-content-md-around
+                            flex-sm-column flex-sm-wrap
+                            flex-md-row
+                ">
                 <a href="#">Início</a>
                 <a href="#">Inscrição</a>
                 <a href="#">Edital</a>
@@ -29,17 +131,403 @@
                 <a href="#">Níveis</a>
             </div>
         </nav>
+        <div class="content_section1 row w-100 d-flex flex-row justify-content-end">
+            <div class="col-6 d-flex flex-column justify-content-center">
+                <!-- <div class="row title__section1" style="font-family: BwMitgaRegular;">
+                        <span style="color: white;">FAÇA SUA</span>
+                        <span style="color: #00a317;"> INSCRIÇÃO</span>
+                    </div> -->
+                <div class="row title__section1">
+                    <img src="./assets/img/section1/title_section1.png" alt="Faça sua inscrição">
+                </div>
+                <div class="row text__section1">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, ratione sunt architecto nostrum
+                    eligendi soluta similique necessitatibus eius laboriosam! Inventore, provident atque!
+                </div>
+                <div class="row buttons__section1">
+                    <a href="#" class="btn" data-toggle="modal" data-target="#myModalIncrevase">
+                        <span class="btn-section1">INSCREVA-SE</span>
+                    </a>
+                    <a href="#" class="btn" data-toggle="modal" data-target="#myModalVejaVideo">
+                        <span class="btn-section1">VEJA O VÍDEO</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row"></div>
     </section>
     <section id="informacoes">
         flkjdslkfjsdl
     </section>
-    <section id="section3"></section>  <!-- sugerir nome para essa sessão rsrs -->
+    <section id="section3"></section> <!-- sugerir nome para essa sessão rsrs -->
     <section id="saiba_mais"></section>
     <section id="fique_por_dentro"></section>
     <section id="footer"></section>
 
 
 
+    <!-- MODAIS -->
+    <!-- ************************************  Modal formulário de cadastro  **************************************** -->
+
+    <div id="myModalIncrevase" class="modal fade" role="dialog" style="z-index: 99999">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header" style="border-bottom: 0px;">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <h4 class="modal-title"><b></b></h4>
+
+                </div>
+
+                <div class="modal-body" style="padding: 0 55px 55px 55px">
+                    <?php if (date("d/m/Y H:m") > '07/06/2020 23:59'){ ?>
+                    <h3>Inscrições encerradas!</h3>
+                    <?php } else { ?>
+
+                    <div id="resultado"></div>
+
+                    <form method="post" class="form-horizontal" name="form1" id="form1">
+                        <br />
+                        <p><strong>DADOS DO CANDIDATO:</strong></p>
+                        <div class="form-group">
+
+                            <label for="nome">Nome Completo: *</label>
+
+                            <input type="text" name="nome" class="form-control" id="nome" maxlength="100"
+                                placeholder="Nome Completo">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="nome_social">Nome Social (como quer ser chamado):</label>
+
+                            <input type="text" name="nome_social" class="form-control" id="nome_social" maxlength="100"
+                                placeholder="Nome Social">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="cpf">CPF: *</label>
+
+                            <input type="text" name="cpf" class="form-control" id="cpf" maxlength="100"
+                                placeholder="CPF">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="dt_nascimento">Data de Nascimento: *</label>
+
+                            <input type="date" name="dt_nascimento" class="form-control" id="dt_nascimento"
+                                maxlength="100" placeholder="Data de Nascimento">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="de_goias">Você é do estado de Goiás? *</label><br>
+
+                            <input type="radio" name="de_goias" value="Sim" onclick="checkDeGoias(1)"> Sim<br>
+
+                            <input type="radio" name="de_goias" value="Não" onclick="checkDeGoias(2)"> Não<br>
+                        </div>
+
+                        <div class="form-group" id="municipio_goias">
+
+                            <label for="municipio">Município: *</label>
+
+                            <?php echo $srtMunicipiosOptions; ?>
+
+                        </div>
+
+                        <div class="form-group" id="estado_fora">
+
+                            <label for="estado">Estado: *</label>
+
+                            <input type="text" name="estado" class="form-control" id="estado" maxlength="100"
+                                placeholder="Estado">
+
+                        </div>
+
+                        <div class="form-group" id="municipio_fora">
+
+                            <label for="municipio_fora_goias">Município: *</label>
+
+                            <input type="text" name="municipio_fora_goias" class="form-control"
+                                id="municipio_fora_goias" maxlength="100" placeholder="Município">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="bairro">Bairro:</label>
+
+                            <input type="text" name="bairro" class="form-control" id="bairro" maxlength="100"
+                                placeholder="Bairro">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="email">E-mail: *</label>
+
+                            <input type="email" name="email" class="form-control" id="email" maxlength="100"
+                                placeholder="Email">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="celular">Celular (Whatsapp): *</label>
+
+                            <input type="celular" name="celular" class="form-control" id="celular" maxlength="100"
+                                placeholder="Celular (Whatsapp)">
+
+                        </div>
+                        <br />
+                        <p><strong>QUESTIONÁRIO:</strong></p>
+                        <div class="form-group">
+                            <label for="sexo">Qual o seu sexo? *</label>
+                            <select id='sexo' name='sexo' class='form-control'>
+                                <option value='0'>---- Selecione ----</option>
+                                <option value='masculino'>Masculino</option>
+                                <option value='feminino'>Feminino</option>
+                                <option value='outros'>Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="profissao">
+
+                            <label for="profissao">Profissão: *</label>
+
+                            <?php echo $srtProfissaoOptions; ?>
+
+                        </div>
+
+                        <!-- <div class="form-group">
+                                <label for="idade">Qual a sua idade? *</label>
+                                <select id='idade' name='idade' class='form-control'>
+                                    <option value='0'>---- Selecione ----</option>
+                                    <option value='Até 20 anos'>Até 20 anos</option>
+                                    <option value='21 a 30 anos'>21 a 30 anos</option>
+                                    <option value='31 a 40 anos'>31 a 40 anos</option>
+                                    <option value='41 a 50 anos'>41 a 50 anos</option>
+                                    <option value='51 a 64 anos'>51 a 64 anos</option>
+                                    <option value='65 ou mais'>65 ou mais</option>
+                                </select>
+                            </div> -->
+
+                        <div class="form-group">
+                            <label for="escolaridade">Qual o seu grau de escolaridade? *</label>
+                            <select id='escolaridade' name='escolaridade' class='form-control'>
+                                <option value='0'>---- Selecione ----</option>
+                                <option value='Não alfabetizado ou fundamental incompleto'>Não alfabetizado ou
+                                    fundamental incompleto</option>
+                                <option value='Fundamental completo ou ensino médio incompleto'>Fundamental completo ou
+                                    ensino médio incompleto</option>
+                                <option value='Ensino médio completo ou ensino superior incompleto'>Ensino médio
+                                    completo ou ensino superior incompleto</option>
+                                <option value='Ensino superior completo'>Ensino superior completo</option>
+                                <option value='Pós-Graduação'>Pós-Graduação</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="deficiencia">Possui alguma deficiência? *</label><br>
+
+                            <input type="radio" name="deficiencia" value="Sim" onclick="checkDeficiencia(1)"> Sim<br>
+
+                            <input type="radio" name="deficiencia" value="Não" onclick="checkDeficiencia(2)"> Não<br>
+
+                        </div>
+
+                        <div class="form-group" id="ds_deficiencia">
+                            <label for="qual_deficiencia"> Se sim, qual?</label>
+                            <input type="text" name="qual_deficiencia" class="form-control" id="qual_deficiencia"
+                                maxlength="100" placeholder="Se sim, qual?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="raca">Qual sua cor, raça/etnia? *</label>
+                            <select id='raca' name='raca' class='form-control'>
+                                <option value='0'>---- Selecione ----</option>
+                                <option value='Amarela'>Amarela</option>
+                                <option value='Branca'>Branca</option>
+                                <option value='Indígena'>Indígena</option>
+                                <option value='Parda'>Parda</option>
+                                <option value='Preta'>Preta</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="renda">Qual a sua renda mensal, aproximadamente? *</label>
+                            <select id='renda' name='renda' class='form-control'>
+                                <option value='0'>---- Selecione ----</option>
+                                <option value='Nenhuma renda'>Nenhuma renda</option>
+                                <option value='Até 1 salário mínimo (até R$ 998,00)'>Até 1 salário mínimo (até R$
+                                    998,00)</option>
+                                <option value='De 1 a 3 salários mínimos (de R$ 998,00 a R$ 2.994)'>De 1 a 3 salários
+                                    mínimos (de R$ 998,00 a R$ 2.994)</option>
+                                <option value='De 3 a 6 salários mínimos (de R$ 2.994 a R$ 5.988)'>De 3 a 6 salários
+                                    mínimos (de R$ 2.994 a R$ 5.988)</option>
+                                <option value='De 6 a 9 salários mínimos (de R$ 5.988 a R$ 8.982)'>De 6 a 9 salários
+                                    mínimos (de R$ 5.988 a R$ 8.982)</option>
+                                <option value='De 9 a 12 salários mínimos (de R$ 8.982 a R$ 11.976)'>De 9 a 12 salários
+                                    mínimos (de R$ 8.982 a R$ 11.976)</option>
+                                <option value='Mais de 12 salários mínimos (mais de R$ 11.976)'>Mais de 12 salários
+                                    mínimos (mais de R$ 11.976)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="qt_pessoas_moram">Quantas pessoas moram com você?</label>
+                            <select id='qt_pessoas_moram' name='qt_pessoas_moram' class='form-control'>
+                                <option value='0'>---- Selecione ----</option>
+                                <option value='Nenhuma'>Nenhuma</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5 ou mais'>5 ou mais</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="zona_residencial">Zona Residencial:</label><br>
+
+                            <input type="radio" name="zona_residencial" value="Rural"> Rural<br>
+
+                            <input type="radio" name="zona_residencial" value="Urbana"> Urbana<br>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="quem_mora">Com quem você mora?</label><br>
+
+                            <input type="checkbox" name="quem_mora[]" value="Pais"> Pais<br>
+
+                            <input type="checkbox" name="quem_mora[]" value="Avós"> Avós<br>
+
+                            <input type="checkbox" name="quem_mora[]" value="Tios"> Tios<br>
+
+                            <input type="checkbox" name="quem_mora[]" value="Esposo ou Esposa"> Esposo (a)<br>
+
+                            <input type="checkbox" name="quem_mora[]" value="Outros"> Outros<br>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="atualmente_voce">Atualmente você: *</label>
+                            <select id='atualmente_voce' name='atualmente_voce' class='form-control'>
+                                <option value='0'>---- Selecione ----</option>
+                                <option value='Apenas estuda'>Apenas estuda</option>
+                                <option value='Estuda e trabalha'>Estuda e trabalha</option>
+                                <option value='Apenas trabalha'>Apenas trabalha</option>
+                                <option value='Desempregado'>Desempregado</option>
+                                <option value='Freelancer'>Freelancer</option>
+                                <option value='Trabalho informal'>Trabalho informal</option>
+                                <option value='Estágio'>Estágio</option>
+                                <option value='Aposentado'>Aposentado</option>
+                                <option value='Outros'>Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="domicilio_ha">No seu domicílio há: (marque mais de uma alternativa, se
+                                necessário):</label><br>
+
+                            <input type="checkbox" name="domicilio_ha[]" value="Celular"> Celular<br>
+
+                            <input type="checkbox" name="domicilio_ha[]" value="Aparelho Televisor"> Aparelho
+                            Televisor<br>
+
+                            <input type="checkbox" name="domicilio_ha[]" value="Acesso à internet em casa"> Acesso à
+                            internet em casa<br>
+
+                            <input type="checkbox" name="domicilio_ha[]" value="Automóvel"> Automóvel<br>
+
+                            <input type="checkbox" name="domicilio_ha[]" value="Computador"> Computador<br>
+                            <input type="checkbox" name="domicilio_ha[]" value="Laptop"> Laptop<br>
+                            <input type="checkbox" name="domicilio_ha[]" value="Moto"> Moto<br>
+                            <input type="checkbox" name="domicilio_ha[]" value="Telefone fixo"> Telefone fixo<br>
+                            <input type="checkbox" name="domicilio_ha[]" value="TV por assinatura"> TV por
+                            assinatura<br>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="voluntariado">Você desenvolve ou já desenvolveu atividades de voluntariado?
+                                *</label><br>
+                            <input type="radio" name="voluntariado" value="Sim"> Sim<br>
+                            <input type="radio" name="voluntariado" value="Não"> Não<br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="atividades_praticas">Voce teria interesse em desenvolver um projeto de cidadania
+                                ao final do Programa? *</label>
+                            <select id='atividades_praticas' name='atividades_praticas' class='form-control'>
+                                <option value='0'>---- Selecione ----</option>
+                                <option value='Sim'>Sim</option>
+                                <option value='Não'>Não</option>
+                                <option value='Talvez'>Talvez</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="impacto">Qual impacto você acredita que o programa Embaixadores da Cidadania
+                                pode ter em sua vida e na de sua comunidade? *</label>
+
+                            <!-- <input type="text" name="impacto" class="form-control" id="impacto" maxlength="300" placeholder="Qual impacto você acredita que o programa Embaixadores da Cidadania pode ter em sua vida e na de sua comunidade?"> -->
+                            <textarea id="impacto" name="impacto" rows="4" cols="22"
+                                placeholder="Comente usando no máximo 300 caracteres..." class="form-control"
+                                maxlength="300"></textarea>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="termo_aceite">Leia os termos do <a
+                                    href="./assets/files/Edital%20Embaixadores%20da%20Cidadania.pdf"
+                                    target="_blank">edital</a>.</label><br>
+                            <input type="checkbox" name="termo_aceite" value="Aceito"> Li e concordo com todos os termos
+                            do edital<br>
+                        </div>
+
+                        <div id="resultado2"></div>
+                    </form>
+                    <?php } ?>
+                </div>
+
+                <div class="modal-footer">
+
+                    <div id="formrodape">
+
+                        <button class="btn" id="cadastrar"
+                            style="background-color: #ffdd00; color: #00519e; margin: 5px auto;">Enviar</button>
+
+                        <button type="button" class="btn " data-dismiss="modal"
+                            style="background-color: #ffdd00; color: #00519e; margin: 5px auto;">Sair</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
 
     <!-- SCRIPT's -->
     <!-- Jquery -->
