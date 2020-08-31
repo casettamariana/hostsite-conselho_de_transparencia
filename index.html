@@ -11,7 +11,6 @@
     <!--Função para colocar horas contagem regressiva-->
 
     <script language="Javascript">
-
         var YY = 2019;
 
         var MM = 07;
@@ -106,8 +105,7 @@
 
             }
 
-        }         
-
+        }
     </script>
 </head>
 
@@ -145,53 +143,49 @@
                     eligendi soluta similique necessitatibus eius laboriosam! Inventore, provident atque!
                 </div>
                 <div class="row buttons__section1">
-                    <a href="#" class="btn" data-toggle="modal" data-target="#myModalIncrevase">
-                        <span class="btn-section1">INSCREVA-SE</span>
-                    </a>
-                    <a href="#" class="btn" data-toggle="modal" data-target="#myModalVejaVideo">
-                        <span class="btn-section1">VEJA O VÍDEO</span>
-                    </a>
+                    <div class="btn__section1">
+                        <a href="#" class="btn hover" data-toggle="modal" data-target="#myModalIncrevase">
+                            <span class="btn-section1">INSCREVA-SE</span>
+                        </a>
+                    </div>
+                    <div class="btn__section1">
+                        <a href="#" class="btn hover" data-toggle="modal" data-target="#myModalVejaVideo">
+                            <span class="btn-section1">VEJA O VÍDEO</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row"></div>
     </section>
-    
+
     <section id="informacoes" class="border border-danger">
-        
-<h1 class="text-center">INFORMAÇÕES</h1>
-<p class="text-center"> Lorem Ipsum is simply dummy 
-    text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's 
-    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-       
-    <div class="row border border-primary">
-    <div class="col-lg-4 text-center">
-            <img class="rounded-circle" 
-            width="140" 
-            height="140"
-            alt="Generic placeholder image" 
-            src="./assets/img/icon-edital.png">
-            <h2>EDITAL</h2>
+
+        <h1 class="text-center">INFORMAÇÕES</h1>
+        <p class="text-center"> Lorem Ipsum is simply dummy
+            text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. </p>
+
+        <div class="row border border-primary">
+            <div class="col-lg-4 text-center">
+                <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
+                    src="./assets/img/icon-edital.png">
+                <h2>EDITAL</h2>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
+                    src="./assets/img/icon-cronograma.png">
+                <h2>CRONOGRAMA</h2>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
+                    src="./assets/img/icon-niveis.png">
+                <h2>NÍVEIS</h2>
+            </div>
+
         </div>
-        <div class="col-lg-4 text-center">
-            <img class="rounded-circle" 
-            width="140" 
-            height="140"
-            alt="Generic placeholder image" 
-            src="./assets/img/icon-cronograma.png">
-            <h2>CRONOGRAMA</h2>
-        </div>
-        <div class="col-lg-4 text-center">
-            <img class="rounded-circle" 
-            width="140" 
-            height="140"
-            alt="Generic placeholder image" 
-            src="./assets/img/icon-niveis.png">
-            <h2>NÍVEIS</h2>
-        </div>
-    
-</div>
     </section>
 
 
@@ -220,9 +214,9 @@
                 </div>
 
                 <div class="modal-body" style="padding: 0 55px 55px 55px">
-                    <?php if (date("d/m/Y H:m") > '07/06/2020 23:59'){ ?>
+                    <!-- <?php if (date("d/m/Y H:m") > '07/06/2020 23:59'){ ?>
                     <h3>Inscrições encerradas!</h3>
-                    <?php } else { ?>
+                    <?php } else { ?> -->
 
                     <div id="resultado"></div>
 
@@ -565,6 +559,38 @@
 
     </div>
 
+
+    <!--**************************************  Modal VIDEO  ***************************************-->
+
+    <div id="myModalVejaVideo" class="modal fade" role="dialog" style="z-index: 99999">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content" style="width: max-content;">
+
+                <div class="modal-header" style="border-bottom:0px">
+                    <span style="font-family: BwMitgaRegular; padding: 10px; font-size: 24px;">Vídeo</span>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body" style="padding: 25px; font-family: BwMitgaRegular; text-align: center;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yJo4hCY2NL0" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="modal-footer" style="text-align:center;">
+
+                    <button type="button" class="btn " data-dismiss="modal"
+                        style="background-color: #00a317; color: #fff;">Sair</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
     <!-- SCRIPT's -->
     <!-- Jquery -->
     <script src="./assets/node_modules/jquery/dist/jquery.min.js"></script>
