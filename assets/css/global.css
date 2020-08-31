@@ -1,3 +1,9 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('../font/FontsFree-Net-BwMitga-Bold.ttf');
+@import url('../font/BwMitgaRegular.otf');
+
+
 @import url('./section1.css');
 
 body {
@@ -6,5 +12,6 @@ body {
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }

@@ -1,0 +1,132 @@
+/* GLOBAL ITEMS */
+#home{
+    background-image: url('../img/backgrounds/Section1.png');
+    min-height: 100vh;
+}
+
+.parallax{
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* NAVBAR */
+
+#home .row .nav__button a{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+    transition-duration: 1.2s;
+}
+
+#home .row .nav__button a:hover{
+    transform: scale(1.2);
+}
+
+/* Conteúdo section 1 */
+
+
+.content_section1 .text__section1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: x-large;
+    color: white;
+    line-height: 2rem;
+    margin: 2% 0 2% 0;
+}
+
+#informacoes{
+    height:1900px;
+    background-color:#00000052
+    font-size:36px;
+}
+
+
+/* Botôes */
+.buttons__section1 a{
+    transition-duration: 1.5s;
+}
+.buttons__section1 a:hover{
+    transform: scale(1.2);
+}
+
+.buttons__section1 a{
+    width: 225px;
+    height: 51px;
+    background-color: #00a317;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.buttons__section1 a:nth-child(2) {
+   margin-left: 5%;
+}
+.btn-section1{
+    padding: 5%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+/* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
+@media (max-width: 575.98px) { 
+    nav .logo img{ /* logo */ 
+        width: 150px;
+    }
+
+    /* FONT's */
+    #home .row .nav__button a{ /* Itens navbar */
+        font-size: larger;
+    }
+}
+
+/* Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    nav .logo img{ /* logo */ 
+        width: 150px;
+    }
+
+    /* FONT's */
+    #home .row .nav__button a{ /* Itens navbar */
+        font-size: larger;
+    }
+}
+
+/* Dispositivos médios (tablets com 768px ou mais) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    nav .logo img{ /* logo */ 
+        width: 150px;
+    }
+
+    /* FONT's */
+    #home .row .nav__button a{ /* Itens navbar */
+        font-size: larger;
+    }
+}
+
+/* Dispositivos large (desktops com 992px ou mais) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    nav .logo img{ /* logo */ 
+        width: 150px;
+    }
+
+    /* FONT's */
+    #home .row .nav__button a{ /* Itens navbar */
+        font-size: larger;
+    }
+}
+
+/* Dispositivos extra large (desktops grandes com 1200px ou mais) */
+@media (min-width: 1200px) { 
+    nav .logo img{ /* logo */ 
+        width: 150px;
+    }
+
+    /* FONT's */
+    #home .row .nav__button a{ /* Itens navbar */
+        font-size: larger;
+    }
+}
