@@ -25,9 +25,7 @@
 
 
 
-        function atualizaContador()
-
-        {
+        function atualizaContador() {
 
             var hoje = new Date();
 
@@ -69,9 +67,7 @@
 
 
 
-            if (dd + hh + mm + ss > 0)
-
-            {
+            if (dd + hh + mm + ss > 0) {
 
                 // document.getElementById('contador').innerHTML = faltam;
 
@@ -85,9 +81,7 @@
 
                 setTimeout(atualizaContador, 1000);
 
-            } else
-
-            {
+            } else {
 
                 // document.getElementById('contador').innerHTML = 'CHEGOU!!!!';
 
@@ -206,45 +200,37 @@
     </section>
 
 
-    <section id="saiba_mais">
-       <div class="container b order">
-        <div class="row b order">
-            <div class="col b order " >
-               <video class="rounded" width="520" height="440" controls>
-                    <source src="./assets/vid/Entrevista para o Conexão CGE (Paraná).mp4" type="video/mp4">  
-               </video>
+    <section id="saiba_mais" class="container d-flex flex-column 
+                                    align-self-center
+                                    justify-content-around justify-content-around">
+        <div class="row">
+            <div class="col">
+                <video class="rounded" width="520" height="440" controls>
+                    <source src="./assets/vid/Entrevista para o Conexão CGE (Paraná).mp4" type="video/mp4">
+                </video>
             </div>
-               <div class="col b order text-left mt-4">
-                <h1 class="mt-5 font-weight-bold">SAIBA MAIS</h1>
-                <p class=""> Lorem Ipsum is simply dummy
-                    text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                    make a type specimen book. </p>
-             </div>
-            
-
-        </div>
-        <div class="row bg-light">
             <div class="col text-center">
-                <h1 class="mt-5 font-weight-bold"  >Fique por dentro de tudo</h1>
-            <p class="mt-5"> Lorem Ipsum is simply dummy
-                text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                make a type specimen book. </p>
-            <div class="">
-                <form class="form-inline">
-            
-                <input type="email" class="form-control mb-2 col-6" id="Input-Email" aria-describedby="emailHelp" placeholder="Digite seu melhor E-mail">
-                <button type="submit" class="btn btn-primary mb-2 ">INSCREVA-SE</button>
-            </form>
+                <h1>SAIBA MAIS</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book. </p>
+            </div>
         </div>
+        <div class="row">
+            <div class="col text-center">
+                <h1>Fique por dentro de tudo</h1>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book. </p>
+                <div>
+                    <form class="form-inline">
+                        <input type="email" class="form-control mb-2 col-6" id="Input-Email"
+                            aria-describedby="emailHelp" placeholder="Digite seu melhor E-mail">
+                        <button type="submit" class="btn btn-primary mb-2 ">INSCREVA-SE</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-       </div>
-        
-        
     </section>
 
 
