@@ -113,20 +113,37 @@
     <section id="home" class="parallax container-fluid d-flex align-items-center">
         <nav class="row position-fixed fixed-top">
             <div class="logo col-2">
-                <img src="./assets/img/logo.svg" alt="Logo Conselgeiros da Cidadania">
+                <a href="#">
+                    <img src="./assets/img/logo.svg" alt="Logo Conselgeiros da Cidadania">
+                </a>
             </div>
             <div class="col"></div>
             <div class="nav__button 
-                            col-5 col-lg-4 p-2
+                            col-6 col-lg-7 p-2
                             d-inline-flex justify-content-md-around
                             flex-sm-column flex-sm-wrap
-                            flex-md-row
-                ">
-                <a href="#">Início</a>
+                            flex-md-row">
+
+                <div class="dropdown">
+                    <a href="#home">O que é o conselho?</a>
+                    <div class="dropdown-content">
+                        <a href="#">Como funciona</a>
+                        <a href="#">Frame de atuação</a>
+                    </div>
+                </div>
+
                 <a href="#">Inscrição</a>
                 <a href="#">Edital</a>
                 <a href="#">Cronograma</a>
-                <a href="#">Níveis</a>
+
+                <div class="dropdown drop2">
+                    <a href="#informacoes">Níveis</a>
+                    <div class="dropdown-content">
+                        <a href="#">Embaixadores da Cidadania</a>
+                        <a href="#">Agente da Cidadania</a>
+                    </div>
+                </div>
+
             </div>
         </nav>
         <div class="content_section1 row w-100 d-flex flex-row justify-content-end">
@@ -139,114 +156,54 @@
                     <img src="./assets/img/section1/title_section1.png" alt="Faça sua inscrição">
                 </div>
                 <div class="row text__section1">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, ratione sunt architecto nostrum
-                    eligendi soluta similique necessitatibus eius laboriosam! Inventore, provident atque!
+                    Inscreva-se agora para o nível Nível I do Conselho de Participação da Cidadã.
+                    <span><br>Seja um(a) <strong>Agente da Cidadania!</strong></span>
                 </div>
                 <div class="row buttons__section1">
-                    <a href="#" class="btn" data-toggle="modal" data-target="#myModalIncrevase">
-                        <span class="btn-section1">INSCREVA-SE</span>
-                    </a>
-                    <a href="#" class="btn" data-toggle="modal" data-target="#myModalVejaVideo">
-                        <span class="btn-section1">VEJA O VÍDEO</span>
-                    </a>
+                    <div class="btn__section1">
+                        <a href="#" class="btn hover" data-toggle="modal" data-target="#myModalIncrevase">
+                            <span class="btn-section1">INSCREVA-SE</span>
+                        </a>
+                    </div>
+                    <div class="btn__section1">
+                        <a href="#" class="btn hover" data-toggle="modal" data-target="#myModalVejaVideo">
+                            <span class="btn-section1">VEJA O VÍDEO</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row"></div>
     </section>
 
-    <section id="informacoes">
-        <div class="container">
-            <div class="row text-center content__informacoes">
-                <h1 class="mx-auto my-4">INFORMAÇÕES</h1>
-                <p class="text-center mx-auto my-4"> Lorem Ipsum is simply dummy
-                    text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. </p>
-            </div>
-            <div class="row b g-secondary">
-                <div class="col-lg-4 text-center">
-                    <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
-                        src="./assets/img/icon-edital.png">
-                    <h2>EDITAL</h2>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
-                        src="./assets/img/icon-cronograma.png">
-                    <h2>CRONOGRAMA</h2>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
-                        src="./assets/img/icon-niveis.png">
-                    <h2>NÍVEIS</h2>
-                </div>
+    <section id="informacoes" class="border border-danger">
 
+        <h1 class="text-center">INFORMAÇÕES</h1>
+        <p class="text-center"> Lorem Ipsum is simply dummy
+            text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. </p>
+
+        <div class="row border border-primary">
+            <div class="col-lg-4 text-center">
+                <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
+                    src="./assets/img/icon-edital.png">
+                <h2>EDITAL</h2>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
+                    src="./assets/img/icon-cronograma.png">
+                <h2>CRONOGRAMA</h2>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
+                    src="./assets/img/icon-niveis.png">
+                <h2>NÍVEIS</h2>
             </div>
 
-        </div> <!-- FIM CONTEINER -->
+        </div>
     </section>
-
-
-    <section id="section3" class="text-white">
-        <div class="row justify-content-end border">
-            <div class="border col-4 align-self-end mt-5  float-right b g-danger">
-
-                <h1 class="my-5">CONSELHEIROS</h1>
-                <p class="text-white">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-
-                <button type="button" class="my-5 btn-lg btn-success">VEJA AQUI</button>
-            </div>
-        </div>
-        <div class="mt-5 border row b g-danger text-center">
-            <div class="col border ">
-                <h1 class="mt-5">ESTATÍSTICAS</h1>
-                <p class="mt-2 text-white">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                <div class="border row align-self-center">
-                    <div class="col text-center">
-                        <img class="rounded-circle border" width="140" height="140" alt="Generic placeholder image"
-                            src="https://picsum.photos/200/300">
-                    </div>
-                    <div class="col text-center">
-                        <img class="rounded-circle border" width="140" height="140" alt="Generic placeholder image"
-                            src="https://picsum.photos/200/300">
-                    </div>
-                    <div class="col text-center">
-                        <img class="rounded-circle border" width="140" height="140" alt="Generic placeholder image"
-                            src="https://picsum.photos/200/300">
-                    </div>
-                    <div class="col text-center">
-                        <img class="rounded-circle border" width="140" height="140" alt="Generic placeholder image"
-                            src="https://picsum.photos/200/300">
-                    </div>
-
-
-                </div>
-                <div class="border col-4 mt-5  float-left b g-danger">
-
-                    <h1 class="my-5">DOCUMENTOS</h1>
-                    <p class="text-white">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-
-                    <button type="button" class="my-5 btn-lg btn-success">CLIQUE AQUI</button>
-                </div>
-            </div>
-
-        </div>
-        <!-- <div  id="container-section3" class="card container bg-success">
-           <img src="./assets/img/backgrounds/Section3.png" class="img-fluid d-block card-img" alt="Card image" >
-            
-        <div class="card-img-overlay text-right">
-            <div class="mt-5 float-left bg-danger">
-            <h1 class="card-title ">CONSELHEIROS</h1>
-            <p class="card-text text-white">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text">Last updated 3 mins ago</p>
-            <button type="button" class="btn-success">VEJA AQUI</button>
-         </div>
-    </div>
-        </div> -->
 
 
     </section> <!-- sugerir nome para essa sessão rsrs -->
@@ -274,9 +231,9 @@
                 </div>
 
                 <div class="modal-body" style="padding: 0 55px 55px 55px">
-                    <?php if (date("d/m/Y H:m") > '07/06/2020 23:59'){ ?>
+                    <!-- <?php if (date("d/m/Y H:m") > '07/06/2020 23:59'){ ?>
                     <h3>Inscrições encerradas!</h3>
-                    <?php } else { ?>
+                    <?php } else { ?> -->
 
                     <div id="resultado"></div>
 
@@ -619,6 +576,38 @@
 
     </div>
 
+
+    <!--**************************************  Modal VIDEO  ***************************************-->
+
+    <div id="myModalVejaVideo" class="modal fade" role="dialog" style="z-index: 99999">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content" style="width: max-content;">
+
+                <div class="modal-header" style="border-bottom:0px">
+                    <span style="font-family: BwMitgaRegular; padding: 10px; font-size: 24px;">Vídeo</span>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body" style="padding: 25px; font-family: BwMitgaRegular; text-align: center;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yJo4hCY2NL0" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="modal-footer" style="text-align:center;">
+
+                    <button type="button" class="btn " data-dismiss="modal"
+                        style="background-color: #00a317; color: #fff;">Sair</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
     <!-- SCRIPT's -->
     <!-- Jquery -->
     <script src="./assets/node_modules/jquery/dist/jquery.min.js"></script>
@@ -631,6 +620,10 @@
     <script>
         feather.replace();
     </script>
+
+    <!-- My script's -->
+    <script src="./assets/js/section1.js"></script>
+
 </body>
 
 </html>
