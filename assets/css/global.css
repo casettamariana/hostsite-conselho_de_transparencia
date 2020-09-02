@@ -3,6 +3,7 @@
 @import url('../font/FontsFree-Net-BwMitga-Black.ttf');
 
 @import url('./section1.css');
+@import url('./section4.css');
 
 body {
     margin: 0;
