@@ -1,5 +1,3 @@
-@import url('../font/FontsFree-Net-BwMitga-Black.ttf');
-
 /* GLOBAL ITEMS */
 #home{
     background-image: url('../img/backgrounds/Section1.png');
@@ -89,9 +87,9 @@
 }
 
 #informacoes{
-    height:1900px;
-    background-color:#00000052
-    font-size:36px;
+    /* height:1900px; */
+    background-color:#ffffff52;
+    font-size: 36px;
 }
 
 
@@ -188,4 +186,4 @@
     #home .row .nav__button a{ /* Itens navbar */
         font-size: larger;
     }
-}
+}                                                                                                                    
