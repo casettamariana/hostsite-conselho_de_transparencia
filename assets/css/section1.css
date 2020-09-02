@@ -3,13 +3,6 @@
     background-image: url('../img/backgrounds/Section1.png');
     min-height: 100vh;
 }
-#section3{
-    background-image: url('../img/backgrounds/Section3.png');
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
 
 .parallax{
     /* Create the parallax scrolling effect */
