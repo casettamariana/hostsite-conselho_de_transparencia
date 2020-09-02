@@ -1,14 +1,37 @@
-#container-section3{
-    background-image: url('../img/backgrounds/Section3.png');
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    
-}
 #section3{
     background-image: url('../img/backgrounds/Section3.png');
     width: 100%;
+    min-height: 2103px;
     height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    align-content: space-between;
+}
+
+#section3 .row h1{
+    color: #00a3169d;
+    font-family: "Bw Mitga Black";
+    font-size: 55px;
+}
+#section3 .row p{
+    font-family: 'Montserrat', sans-serif;
+    padding: 5% 0;
+    font-size: 25px;
+}
+#section3 .row:nth-child(1) p,
+#section3 .row:nth-child(3) p{
+    padding: 0 6% 0 6%;
+    text-align: justify;
+}
+#section3 .row button{
+    background: #00a3169d;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border: none;
+    padding: 2% 5%;
+    transition-duration: 1.2s;
+}
+#section3 .row button:hover{
+    transform: scale(1.1);
 }
