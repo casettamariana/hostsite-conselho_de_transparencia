@@ -1,0 +1,18 @@
+#saiba_mais{
+    width: 100%;
+}
+#saiba_mais .row h1{
+    color: #333;
+    font-family: "Bw Mitga Black";
+}
+#saiba_mais .row p{
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5% 0;
+}
+#saiba_mais .row{
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+    justify-content: space-around;
+}
