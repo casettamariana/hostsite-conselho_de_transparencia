@@ -1,5 +1,27 @@
 #saiba_mais{
-    width: 100%;
+    width: 100vw;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 15% 0;
+}
+#saiba_mais .row{
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    justify-items: center;
+}
+#saiba_mais .row .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-items: center;
+    justify-self: center;
+}
+#saiba_mais .row .col iframe{
+    border-radius: 20px;
 }
 #saiba_mais .row h1{
     color: #333;
@@ -8,11 +30,5 @@
 #saiba_mais .row p{
     color: #333;
     font-family: 'Montserrat', sans-serif;
-    padding: 5% 0;
-}
-#saiba_mais .row{
-    display: flex;
-    align-content: space-around;
-    align-items: center;
-    justify-content: space-around;
+    padding: 4% 12% 0 12%;
 }
