@@ -1,3 +1,6 @@
+#informacoes a:link{
+    text-decoration: none;
+}
 #informacoes{
     margin: 5% 0 10% 0;
 }
@@ -12,15 +15,29 @@
     font-size: 25px;
     font-weight: 700;
 }
-#informacoes .btn__containerInformacoes h2{
+#informacoes .btn__containerInformacoes h2,
+#informacoes .btn__containerInformacoes a h2{
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     font-weight: 700;
+    color: #333333;
     margin-top: 4%;
+
 }
-#informacoes .btn__containerInformacoes p{
+#informacoes .btn__containerInformacoes p,
+#informacoes .btn__containerInformacoes a p{
     font-family: 'Montserrat', sans-serif;
     color: #333333;
     font-size: small;
     padding: 0 12% 0 12%;
+
 }
+#informacoes .container .btn__containerInformacoes div{
+    transition-duration: 1.5s;
+    cursor: pointer;
+
+} 
+#informacoes .container .btn__containerInformacoes div:hover{
+    transform: scale(1.05);
+
+} 

@@ -179,12 +179,14 @@
             </div>
             <div class="row b g-secondary btn__containerInformacoes my-5">
                 <div class="col-lg-4 text-center">
-                    <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
+                    <a href="./assets/files/Edital_Embaixadores_da_Cidadania.pdf" target="_blank">
+                        <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
                         src="./assets/img/icon-edital.png">
-                    <h2>EDITAL</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="col-lg-4 text-center">
+                        <h2>EDITAL</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </a>
+                    </div>
+                <div class="col-lg-4 text-center" data-toggle="modal" data-target="#myModalCronograma">
                     <img class="rounded-circle" width="140" height="140" alt="Generic placeholder image"
                         src="./assets/img/icon-cronograma.png">
                     <h2>CRONOGRAMA</h2>
@@ -201,7 +203,6 @@
 
         </div> <!-- FIM CONTEINER -->
     </section>
-
 
     <section id="section3" class="d-flex flex-column align-items-stretch justify-content-around">
         <div class="row justify-content-end text-center">
@@ -301,44 +302,51 @@
             </form>
         </div>
     </section>
+
     <section id="footer">
 
         <div class="jumbotron text-center" style="margin-bottom:0">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                <div class="col">
-                    <h1>SIGA-NOS</h1>
-                    <p>This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                        
-                            <a href="" target="_blank"><span class="mx-2 fa fa-facebook fa-3x"></span></a>
-                            <a href="" target="_blank"><span class="my-2 mx-2 fa fa-instagram fa-3x"></span></a>
-                            <a href="" target="_blank"><span class="my-2 mx-2 fa fa-twitter fa-3x"></span></a>
-                        </ul> 
+                    <div class="col">
+                        <h1>SIGA-NOS</h1>
+                        <p>This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+
+                        <a href="" target="_blank"><span class="mx-2 fa fa-facebook fa-3x"></span></a>
+                        <a href="" target="_blank"><span class="my-2 mx-2 fa fa-instagram fa-3x"></span></a>
+                        <a href="" target="_blank"><span class="my-2 mx-2 fa fa-twitter fa-3x"></span></a>
+                        </ul>
+                    </div>
+                    <div class="col text-left">
+                        <h1>CONTATOS</h1>
+
+
+                        <ul class="list-group  ">
+                            <li class="my-2 fa fa-phone fa-2x"><span class="ml-2">+55 62 9 9999-9999</span></li>
+                            <li class="" style="list-style: none;"><a href="" target="_blank"><span
+                                        class="my-2 mx-2 fa fa-whatsapp fa-2x"><i class="mx-2">+55 62 9
+                                            9999-9999</i></span></a></li>
+                            <li class="" style="list-style: none;"><a href="" target="_blank"><span
+                                        class="my-2 mx-2 fa fa-telegram fa-2x"><i class="mx-2">+55 62 9
+                                            9999-9999</i></span></a></li>
+
+                            <li class="" style="list-style: none;"><a href="mailto:conselho@goias.gov.br"
+                                    target="_blank"><span class="my-2 mx-2 fa fa-envelope fa-2x"><i
+                                            class="mx-2">conselho@goias.gov.br</i></span></a></li>
+                            <!-- div#noticia span.noticia -->
+
+                        </ul>
+
+
+                    </div>
+
+
+
                 </div>
-                <div class="col text-left">
-                    <h1>CONTATOS</h1>
-                   
-                    
-                    <ul class="list-group  ">
-                        <li class="my-2 fa fa-phone fa-2x"><span class="ml-2">+55 62 9 9999-9999</span></li>
-                        <li class="" style="list-style: none;"><a href="" target="_blank"><span class="my-2 mx-2 fa fa-whatsapp fa-2x"><i class="mx-2">+55 62 9 9999-9999</i></span></a></li>
-                        <li class="" style="list-style: none;"><a href="" target="_blank"><span class="my-2 mx-2 fa fa-telegram fa-2x"><i class="mx-2">+55 62 9 9999-9999</i></span></a></li>
-                        
-                        <li class="" style="list-style: none;"><a href="mailto:conselho@goias.gov.br" target="_blank"><span class="my-2 mx-2 fa fa-envelope fa-2x"><i class="mx-2">conselho@goias.gov.br</i></span></a></li>
-                        <!-- div#noticia span.noticia -->
-                        
-                    </ul>
-                    
-                       
-                </div>
-                
 
 
             </div>
-            
-            
-        </div>
         </div>
     </section>
 
@@ -467,7 +475,10 @@
                 </div>
 
                 <div class="modal-body" style="padding: 25px; font-family: BwMitgaRegular; text-align: center;">
-                    <p>O Conselho Virtual de Participação Cidadã, também chamado de “Conselheiros da Cidadania”, é um órgão colegiado de natureza consultiva e propositiva, integrante da estrutura da Controladoria-Geral do Estado de Goiás que tem a finalidade de promover a participação cidadã e o fomento ao controle social em prol do fortalecimento da democracia.</p>
+                    <p>O Conselho Virtual de Participação Cidadã, também chamado de “Conselheiros da Cidadania”, é um
+                        órgão colegiado de natureza consultiva e propositiva, integrante da estrutura da
+                        Controladoria-Geral do Estado de Goiás que tem a finalidade de promover a participação cidadã e
+                        o fomento ao controle social em prol do fortalecimento da democracia.</p>
                 </div>
 
                 <div class="modal-footer" style="text-align:center;">
@@ -497,11 +508,14 @@
                 </div>
 
                 <div class="modal-body" style="padding: 25px; font-family: BwMitgaRegular; text-align: center;">
-                    <P>O Conselho é composto por cidadãos selecionados por chamamento público conduzido pela Controladoria Geral do Estado de Goiás. No Conselho, o cidadão deverá: </P>
+                    <P>O Conselho é composto por cidadãos selecionados por chamamento público conduzido pela
+                        Controladoria Geral do Estado de Goiás. No Conselho, o cidadão deverá: </P>
                     <ul>
                         <li>Propor e acompanhar projetos e ações prioritárias da política de participação cidadã;</li>
-                        <li>Realizar estudos e estabelecer estratégias que fundamentem propostas legislativas e administrativas tendentes a maximizar a participação cidadã na gestão pública;</li>
-                        <li>Articular e mobilizar da sociedade civil para o aprimoramento do controle social no Estado de Goiás;</li>
+                        <li>Realizar estudos e estabelecer estratégias que fundamentem propostas legislativas e
+                            administrativas tendentes a maximizar a participação cidadã na gestão pública;</li>
+                        <li>Articular e mobilizar da sociedade civil para o aprimoramento do controle social no Estado
+                            de Goiás;</li>
                         <li>Apoiar iniciativas locais de estímulo a cidadania e participação social.</li>
                     </ul>
                 </div>
@@ -533,10 +547,14 @@
                 </div>
 
                 <div class="modal-body" style="padding: 25px; font-family: BwMitgaRegular; text-align: center;">
-                    <P>O Conselho Virtual de Participação Cidadã é composto por duas partes: o Conselho Nível I chamado “Agente da Cidadania” e o Conselho de Nível II com integrantes do programa “Embaixadores da Cidadania”.</P>
+                    <P>O Conselho Virtual de Participação Cidadã é composto por duas partes: o Conselho Nível I chamado
+                        “Agente da Cidadania” e o Conselho de Nível II com integrantes do programa “Embaixadores da
+                        Cidadania”.</P>
                     <ul>
-                        <li>Nível I - Agente da Cidadania - Consultivo, virtual e aberto a qualquer cidadão com mais de 16 anos;</li>
-                        <li>Nível II - Participantes do nível I, Consultivo, executivo, virtual e certificado pelo Programa Embaixadores da Cidadania ou, excepcionalmente, mediante avaliação prévia.</li>
+                        <li>Nível I - Agente da Cidadania - Consultivo, virtual e aberto a qualquer cidadão com mais de
+                            16 anos;</li>
+                        <li>Nível II - Participantes do nível I, Consultivo, executivo, virtual e certificado pelo
+                            Programa Embaixadores da Cidadania ou, excepcionalmente, mediante avaliação prévia.</li>
                         <a href="./assets/files/Edital_Embaixadores_da_Cidadania.pdf" target="_blank">
                             <li>Clique aqui para acessar o edital.</li>
                         </a>
