@@ -186,4 +186,28 @@
     #home .row .nav__button a{ /* Itens navbar */
         font-size: larger;
     }
-}                                                                                                                    
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.modal-body ul{
+    min-width: 200px;
+    width: 40vw;
+    text-align: justify;
+}
+.modal-body p{
+    text-align: center;
+    min-width: 200px;
+    width: 60vw;
+    padding: 2% 5%;
+}
+#myModalCronograma .modal-dialog .modal-body img{
+    min-width: 200px;
+    width: 800px;
+    
+}

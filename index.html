@@ -119,16 +119,16 @@
                             flex-md-row">
 
                 <div class="dropdown">
-                    <a href="#home">O que é o conselho?</a>
+                    <a href="#" data-toggle="modal" data-target="#myModalOqueE">O que é o conselho?</a>
                     <div class="dropdown-content">
-                        <a href="#">Como funciona</a>
-                        <a href="#">Frame de atuação</a>
+                        <a href="#" data-toggle="modal" data-target="#myModalComoFunciona">Como funciona</a>
+                        <a href="#" data-toggle="modal" data-target="#myModalComposicao">Composição</a>
                     </div>
                 </div>
 
-                <a href="#">Inscrição</a>
-                <a href="#">Edital</a>
-                <a href="#">Cronograma</a>
+                <a href="#" data-toggle="modal" data-target="#myModalIncrevase">Inscrição</a>
+                <a href="./assets/files/Edital_Embaixadores_da_Cidadania.pdf" target="_blank">Edital</a>
+                <a href="#" data-toggle="modal" data-target="#myModalCronograma">Cronograma</a>
 
                 <div class="dropdown drop2">
                     <a href="#informacoes">Níveis</a>
@@ -271,8 +271,9 @@
     <section id="saiba_mais" class="container-fluid">
         <div class="row d-flex flex-row">
             <div class="col">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/V2mphqW8SVw" frameborder="0" 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/V2mphqW8SVw" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
             <div class="col text-center">
                 <h1>SAIBA MAIS</h1>
@@ -294,8 +295,8 @@
         </div>
         <div class="row">
             <form class="col justify-content-center form-inline">
-                <input type="email" class="form-control mb-2 col-6" id="Input-Email"
-                    aria-describedby="emailHelp" placeholder="Digite seu melhor E-mail">
+                <input type="email" class="form-control mb-2 col-6" id="Input-Email" aria-describedby="emailHelp"
+                    placeholder="Digite seu melhor E-mail">
                 <button type="submit" class="btn">INSCREVA-SE</button>
             </form>
         </div>
@@ -307,13 +308,14 @@
     <!-- MODAIS -->
     <!-- ************************************  Modal formulário de cadastro  **************************************** -->
 
-    <div id="myModalIncrevase" class="modal fade" role="dialog" style="z-index: 99999">
+    <div id="myModalIncrevase" class="modal fade" role="dialog" style="z-index: 99999;">
 
-        <div class="modal-dialog">
+        <div class="modal-dialog d-flex" style="justify-content: center;">
 
-            <div class="modal-content">
+            <div class="modal-content" style="width: max-content; justify-self: center;">
 
                 <div class="modal-header" style="border-bottom: 0px;">
+                    <h4>Inscrição</h4>
 
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -322,327 +324,9 @@
                 </div>
 
                 <div class="modal-body" style="padding: 0 55px 55px 55px">
-                    <!-- <?php if (date("d/m/Y H:m") > '07/06/2020 23:59'){ ?>
-                    <h3>Inscrições encerradas!</h3>
-                    <?php } else { ?> -->
-
-                    <div id="resultado"></div>
-
-                    <form method="post" class="form-horizontal" name="form1" id="form1">
-                        <br />
-                        <p><strong>DADOS DO CANDIDATO:</strong></p>
-                        <div class="form-group">
-
-                            <label for="nome">Nome Completo: *</label>
-
-                            <input type="text" name="nome" class="form-control" id="nome" maxlength="100"
-                                placeholder="Nome Completo">
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <label for="nome_social">Nome Social (como quer ser chamado):</label>
-
-                            <input type="text" name="nome_social" class="form-control" id="nome_social" maxlength="100"
-                                placeholder="Nome Social">
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <label for="cpf">CPF: *</label>
-
-                            <input type="text" name="cpf" class="form-control" id="cpf" maxlength="100"
-                                placeholder="CPF">
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <label for="dt_nascimento">Data de Nascimento: *</label>
-
-                            <input type="date" name="dt_nascimento" class="form-control" id="dt_nascimento"
-                                maxlength="100" placeholder="Data de Nascimento">
-
-                        </div>
-
-                        <div class="form-group">
-                            <label for="de_goias">Você é do estado de Goiás? *</label><br>
-
-                            <input type="radio" name="de_goias" value="Sim" onclick="checkDeGoias(1)"> Sim<br>
-
-                            <input type="radio" name="de_goias" value="Não" onclick="checkDeGoias(2)"> Não<br>
-                        </div>
-
-                        <div class="form-group" id="municipio_goias">
-
-                            <label for="municipio">Município: *</label>
-
-                            <?php echo $srtMunicipiosOptions; ?>
-
-                        </div>
-
-                        <div class="form-group" id="estado_fora">
-
-                            <label for="estado">Estado: *</label>
-
-                            <input type="text" name="estado" class="form-control" id="estado" maxlength="100"
-                                placeholder="Estado">
-
-                        </div>
-
-                        <div class="form-group" id="municipio_fora">
-
-                            <label for="municipio_fora_goias">Município: *</label>
-
-                            <input type="text" name="municipio_fora_goias" class="form-control"
-                                id="municipio_fora_goias" maxlength="100" placeholder="Município">
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <label for="bairro">Bairro:</label>
-
-                            <input type="text" name="bairro" class="form-control" id="bairro" maxlength="100"
-                                placeholder="Bairro">
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <label for="email">E-mail: *</label>
-
-                            <input type="email" name="email" class="form-control" id="email" maxlength="100"
-                                placeholder="Email">
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <label for="celular">Celular (Whatsapp): *</label>
-
-                            <input type="celular" name="celular" class="form-control" id="celular" maxlength="100"
-                                placeholder="Celular (Whatsapp)">
-
-                        </div>
-                        <br />
-                        <p><strong>QUESTIONÁRIO:</strong></p>
-                        <div class="form-group">
-                            <label for="sexo">Qual o seu sexo? *</label>
-                            <select id='sexo' name='sexo' class='form-control'>
-                                <option value='0'>---- Selecione ----</option>
-                                <option value='masculino'>Masculino</option>
-                                <option value='feminino'>Feminino</option>
-                                <option value='outros'>Outros</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group" id="profissao">
-
-                            <label for="profissao">Profissão: *</label>
-
-                            <?php echo $srtProfissaoOptions; ?>
-
-                        </div>
-
-                        <!-- <div class="form-group">
-                                <label for="idade">Qual a sua idade? *</label>
-                                <select id='idade' name='idade' class='form-control'>
-                                    <option value='0'>---- Selecione ----</option>
-                                    <option value='Até 20 anos'>Até 20 anos</option>
-                                    <option value='21 a 30 anos'>21 a 30 anos</option>
-                                    <option value='31 a 40 anos'>31 a 40 anos</option>
-                                    <option value='41 a 50 anos'>41 a 50 anos</option>
-                                    <option value='51 a 64 anos'>51 a 64 anos</option>
-                                    <option value='65 ou mais'>65 ou mais</option>
-                                </select>
-                            </div> -->
-
-                        <div class="form-group">
-                            <label for="escolaridade">Qual o seu grau de escolaridade? *</label>
-                            <select id='escolaridade' name='escolaridade' class='form-control'>
-                                <option value='0'>---- Selecione ----</option>
-                                <option value='Não alfabetizado ou fundamental incompleto'>Não alfabetizado ou
-                                    fundamental incompleto</option>
-                                <option value='Fundamental completo ou ensino médio incompleto'>Fundamental completo ou
-                                    ensino médio incompleto</option>
-                                <option value='Ensino médio completo ou ensino superior incompleto'>Ensino médio
-                                    completo ou ensino superior incompleto</option>
-                                <option value='Ensino superior completo'>Ensino superior completo</option>
-                                <option value='Pós-Graduação'>Pós-Graduação</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-
-                            <label for="deficiencia">Possui alguma deficiência? *</label><br>
-
-                            <input type="radio" name="deficiencia" value="Sim" onclick="checkDeficiencia(1)"> Sim<br>
-
-                            <input type="radio" name="deficiencia" value="Não" onclick="checkDeficiencia(2)"> Não<br>
-
-                        </div>
-
-                        <div class="form-group" id="ds_deficiencia">
-                            <label for="qual_deficiencia"> Se sim, qual?</label>
-                            <input type="text" name="qual_deficiencia" class="form-control" id="qual_deficiencia"
-                                maxlength="100" placeholder="Se sim, qual?">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="raca">Qual sua cor, raça/etnia? *</label>
-                            <select id='raca' name='raca' class='form-control'>
-                                <option value='0'>---- Selecione ----</option>
-                                <option value='Amarela'>Amarela</option>
-                                <option value='Branca'>Branca</option>
-                                <option value='Indígena'>Indígena</option>
-                                <option value='Parda'>Parda</option>
-                                <option value='Preta'>Preta</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="renda">Qual a sua renda mensal, aproximadamente? *</label>
-                            <select id='renda' name='renda' class='form-control'>
-                                <option value='0'>---- Selecione ----</option>
-                                <option value='Nenhuma renda'>Nenhuma renda</option>
-                                <option value='Até 1 salário mínimo (até R$ 998,00)'>Até 1 salário mínimo (até R$
-                                    998,00)</option>
-                                <option value='De 1 a 3 salários mínimos (de R$ 998,00 a R$ 2.994)'>De 1 a 3 salários
-                                    mínimos (de R$ 998,00 a R$ 2.994)</option>
-                                <option value='De 3 a 6 salários mínimos (de R$ 2.994 a R$ 5.988)'>De 3 a 6 salários
-                                    mínimos (de R$ 2.994 a R$ 5.988)</option>
-                                <option value='De 6 a 9 salários mínimos (de R$ 5.988 a R$ 8.982)'>De 6 a 9 salários
-                                    mínimos (de R$ 5.988 a R$ 8.982)</option>
-                                <option value='De 9 a 12 salários mínimos (de R$ 8.982 a R$ 11.976)'>De 9 a 12 salários
-                                    mínimos (de R$ 8.982 a R$ 11.976)</option>
-                                <option value='Mais de 12 salários mínimos (mais de R$ 11.976)'>Mais de 12 salários
-                                    mínimos (mais de R$ 11.976)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="qt_pessoas_moram">Quantas pessoas moram com você?</label>
-                            <select id='qt_pessoas_moram' name='qt_pessoas_moram' class='form-control'>
-                                <option value='0'>---- Selecione ----</option>
-                                <option value='Nenhuma'>Nenhuma</option>
-                                <option value='1'>1</option>
-                                <option value='2'>2</option>
-                                <option value='3'>3</option>
-                                <option value='4'>4</option>
-                                <option value='5 ou mais'>5 ou mais</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-
-                            <label for="zona_residencial">Zona Residencial:</label><br>
-
-                            <input type="radio" name="zona_residencial" value="Rural"> Rural<br>
-
-                            <input type="radio" name="zona_residencial" value="Urbana"> Urbana<br>
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <label for="quem_mora">Com quem você mora?</label><br>
-
-                            <input type="checkbox" name="quem_mora[]" value="Pais"> Pais<br>
-
-                            <input type="checkbox" name="quem_mora[]" value="Avós"> Avós<br>
-
-                            <input type="checkbox" name="quem_mora[]" value="Tios"> Tios<br>
-
-                            <input type="checkbox" name="quem_mora[]" value="Esposo ou Esposa"> Esposo (a)<br>
-
-                            <input type="checkbox" name="quem_mora[]" value="Outros"> Outros<br>
-
-                        </div>
-
-                        <div class="form-group">
-                            <label for="atualmente_voce">Atualmente você: *</label>
-                            <select id='atualmente_voce' name='atualmente_voce' class='form-control'>
-                                <option value='0'>---- Selecione ----</option>
-                                <option value='Apenas estuda'>Apenas estuda</option>
-                                <option value='Estuda e trabalha'>Estuda e trabalha</option>
-                                <option value='Apenas trabalha'>Apenas trabalha</option>
-                                <option value='Desempregado'>Desempregado</option>
-                                <option value='Freelancer'>Freelancer</option>
-                                <option value='Trabalho informal'>Trabalho informal</option>
-                                <option value='Estágio'>Estágio</option>
-                                <option value='Aposentado'>Aposentado</option>
-                                <option value='Outros'>Outros</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-
-                            <label for="domicilio_ha">No seu domicílio há: (marque mais de uma alternativa, se
-                                necessário):</label><br>
-
-                            <input type="checkbox" name="domicilio_ha[]" value="Celular"> Celular<br>
-
-                            <input type="checkbox" name="domicilio_ha[]" value="Aparelho Televisor"> Aparelho
-                            Televisor<br>
-
-                            <input type="checkbox" name="domicilio_ha[]" value="Acesso à internet em casa"> Acesso à
-                            internet em casa<br>
-
-                            <input type="checkbox" name="domicilio_ha[]" value="Automóvel"> Automóvel<br>
-
-                            <input type="checkbox" name="domicilio_ha[]" value="Computador"> Computador<br>
-                            <input type="checkbox" name="domicilio_ha[]" value="Laptop"> Laptop<br>
-                            <input type="checkbox" name="domicilio_ha[]" value="Moto"> Moto<br>
-                            <input type="checkbox" name="domicilio_ha[]" value="Telefone fixo"> Telefone fixo<br>
-                            <input type="checkbox" name="domicilio_ha[]" value="TV por assinatura"> TV por
-                            assinatura<br>
-
-                        </div>
-
-                        <div class="form-group">
-                            <label for="voluntariado">Você desenvolve ou já desenvolveu atividades de voluntariado?
-                                *</label><br>
-                            <input type="radio" name="voluntariado" value="Sim"> Sim<br>
-                            <input type="radio" name="voluntariado" value="Não"> Não<br>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="atividades_praticas">Voce teria interesse em desenvolver um projeto de cidadania
-                                ao final do Programa? *</label>
-                            <select id='atividades_praticas' name='atividades_praticas' class='form-control'>
-                                <option value='0'>---- Selecione ----</option>
-                                <option value='Sim'>Sim</option>
-                                <option value='Não'>Não</option>
-                                <option value='Talvez'>Talvez</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-
-                            <label for="impacto">Qual impacto você acredita que o programa Embaixadores da Cidadania
-                                pode ter em sua vida e na de sua comunidade? *</label>
-
-                            <!-- <input type="text" name="impacto" class="form-control" id="impacto" maxlength="300" placeholder="Qual impacto você acredita que o programa Embaixadores da Cidadania pode ter em sua vida e na de sua comunidade?"> -->
-                            <textarea id="impacto" name="impacto" rows="4" cols="22"
-                                placeholder="Comente usando no máximo 300 caracteres..." class="form-control"
-                                maxlength="300"></textarea>
-
-                        </div>
-
-                        <div class="form-group">
-                            <label for="termo_aceite">Leia os termos do <a
-                                    href="./assets/files/Edital%20Embaixadores%20da%20Cidadania.pdf"
-                                    target="_blank">edital</a>.</label><br>
-                            <input type="checkbox" name="termo_aceite" value="Aceito"> Li e concordo com todos os termos
-                            do edital<br>
-                        </div>
-
-                        <div id="resultado2"></div>
-                    </form>
-                    <?php } ?>
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdAq5soUJ1IEvwVXKJbCLkhlAJlpBhmJrcG_I13ARtP3fzj3w/viewform?embedded=true"
+                        width="640" height="616" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
                 </div>
 
                 <div class="modal-footer">
@@ -672,9 +356,9 @@
 
     <div id="myModalVejaVideo" class="modal fade" role="dialog" style="z-index: 99999">
 
-        <div class="modal-dialog">
+        <div class="modal-dialog d-flex" style="justify-content: center;">
 
-            <div class="modal-content" style="width: max-content;">
+            <div class="modal-content" style="width: max-content; justify-self: center;">
 
                 <div class="modal-header" style="border-bottom:0px">
                     <span style="font-family: BwMitgaRegular; padding: 10px; font-size: 24px;">Vídeo</span>
@@ -699,6 +383,140 @@
         </div>
 
     </div>
+
+    <!--**************************************  Modal CRONOGRAMA  ***************************************-->
+
+    <div id="myModalCronograma" class="modal fade" role="dialog" style="z-index: 99999">
+
+        <div class="modal-dialog d-flex" style="justify-content: center;">
+
+            <div class="modal-content" style="width: max-content; justify-self: center;">
+
+                <div class="modal-header" style="border-bottom:0px">
+                    <span style="font-family: BwMitgaRegular; padding: 10px; font-size: 24px;">Cronograma</span>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body" style="padding: 25px; font-family: BwMitgaRegular; text-align: center;">
+                    <img src="./assets/files/CRONOGRAMA.jpeg" alt="cronograma do projeto conselheiros da cidadania">
+                </div>
+
+                <div class="modal-footer" style="text-align:center;">
+
+                    <button type="button" class="btn " data-dismiss="modal"
+                        style="background-color: #00a317; color: #fff;">Sair</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--**************************************  Modal O QUE É O CONSELHO  ***************************************-->
+
+    <div id="myModalOqueE" class="modal fade" role="dialog" style="z-index: 99999">
+
+        <div class="modal-dialog d-flex" style="justify-content: center;">
+
+            <div class="modal-content" style="width: max-content; justify-self: center;">
+
+                <div class="modal-header" style="border-bottom:0px">
+                    <span style="font-family: BwMitgaRegular; padding: 10px; font-size: 24px;">O que é o Conselho</span>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body" style="padding: 25px; font-family: BwMitgaRegular; text-align: center;">
+                    <p>O Conselho Virtual de Participação Cidadã, também chamado de “Conselheiros da Cidadania”, é um órgão colegiado de natureza consultiva e propositiva, integrante da estrutura da Controladoria-Geral do Estado de Goiás que tem a finalidade de promover a participação cidadã e o fomento ao controle social em prol do fortalecimento da democracia.</p>
+                </div>
+
+                <div class="modal-footer" style="text-align:center;">
+
+                    <button type="button" class="btn " data-dismiss="modal"
+                        style="background-color: #00a317; color: #fff;">Sair</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--**************************************  Modal COMO FUNCIONA O CONSELHO  ***************************************-->
+
+    <div id="myModalComoFunciona" class="modal fade" role="dialog" style="z-index: 99999">
+
+        <div class="modal-dialog d-flex" style="justify-content: center;">
+
+            <div class="modal-content" style="width: max-content; justify-self: center;">
+
+                <div class="modal-header" style="border-bottom:0px">
+                    <span style="font-family: BwMitgaRegular; padding: 10px; font-size: 24px;">O que é o Conselho</span>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body" style="padding: 25px; font-family: BwMitgaRegular; text-align: center;">
+                    <P>O Conselho é composto por cidadãos selecionados por chamamento público conduzido pela Controladoria Geral do Estado de Goiás. No Conselho, o cidadão deverá: </P>
+                    <ul>
+                        <li>Propor e acompanhar projetos e ações prioritárias da política de participação cidadã;</li>
+                        <li>Realizar estudos e estabelecer estratégias que fundamentem propostas legislativas e administrativas tendentes a maximizar a participação cidadã na gestão pública;</li>
+                        <li>Articular e mobilizar da sociedade civil para o aprimoramento do controle social no Estado de Goiás;</li>
+                        <li>Apoiar iniciativas locais de estímulo a cidadania e participação social.</li>
+                    </ul>
+                </div>
+
+                <div class="modal-footer" style="text-align:center;">
+
+                    <button type="button" class="btn " data-dismiss="modal"
+                        style="background-color: #00a317; color: #fff;">Sair</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--**************************************  Modal COMPOSICAO DO CONSELHO ***************************************-->
+
+    <div id="myModalComposicao" class="modal fade" role="dialog" style="z-index: 99999">
+
+        <div class="modal-dialog d-flex" style="justify-content: center;">
+
+            <div class="modal-content" style="width: max-content; justify-self: center;">
+
+                <div class="modal-header" style="border-bottom:0px">
+                    <span style="font-family: BwMitgaRegular; padding: 10px; font-size: 24px;">O que é o Conselho</span>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body" style="padding: 25px; font-family: BwMitgaRegular; text-align: center;">
+                    <P>O Conselho Virtual de Participação Cidadã é composto por duas partes: o Conselho Nível I chamado “Agente da Cidadania” e o Conselho de Nível II com integrantes do programa “Embaixadores da Cidadania”.</P>
+                    <ul>
+                        <li>Nível I - Agente da Cidadania - Consultivo, virtual e aberto a qualquer cidadão com mais de 16 anos;</li>
+                        <li>Nível II - Participantes do nível I, Consultivo, executivo, virtual e certificado pelo Programa Embaixadores da Cidadania ou, excepcionalmente, mediante avaliação prévia.</li>
+                        <a href="./assets/files/Edital_Embaixadores_da_Cidadania.pdf" target="_blank">
+                            <li>Clique aqui para acessar o edital.</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="modal-footer" style="text-align:center;">
+
+                    <button type="button" class="btn " data-dismiss="modal"
+                        style="background-color: #00a317; color: #fff;">Sair</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <!-- SCRIPT's -->
     <!-- Jquery -->
     <script src="./assets/node_modules/jquery/dist/jquery.min.js"></script>
